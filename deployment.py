@@ -36,6 +36,7 @@ market_trend_map  = {"Growing": 2, "Stable": 1, "Declining": 0}
 # --- Predict ---
 if st.button("Predict Bankruptcy Risk"):
     features = np.array([[
+        0,
         industry_map[industry],
         years_in_operation,
         annual_revenue,
