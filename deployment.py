@@ -17,7 +17,7 @@ total_assets        = st.number_input("Total Assets", min_value=0, step=1000)
 total_liabilities   = st.number_input("Total Liabilities", min_value=0, step=1000)
 debt_to_equity      = st.slider("Debt to Equity Ratio", min_value=0.0, max_value=20.0, step=0.1)
 current_ratio       = st.slider("Current Ratio", min_value=0.0, max_value=10.0, step=0.1)
-cash_flow           = st.number_input("Cash Flow",step=1000.0, format="%.2f"
+cash_flow           = st.number_input("Cash Flow",step=1000.0, format="%.2f")
 credit_rating       = st.radio("Credit Rating",options=["A", "B", "C", "D"],horizontal=True)
 employee_count      = st.number_input("Employee Count", min_value=0, step=1)
 market_trend        = st.selectbox("Market Trend",options=["Growing", "Stable", "Declining"])
