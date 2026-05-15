@@ -8,7 +8,7 @@ scaler = joblib.load('ss.pkl')
 st.title('Bankruptcy Prediction')
 st.write('Enter company financial details below:')
 
-company_id          = st.number_input("Company ID", min_value=0, step=1)
+company_id          = st.text_input("Company ID", placeholder="e.g. F22781")
 industry            = st.selectbox("Industry",options=["Manufacturing", "Retail", "IT", "Construction", "Healthcare", "Finance"])
 years_in_operation  = st.slider("Years in Operation", min_value=0, max_value=50, value=0, step=1)
 annual_revenue      = st.number_input("Annual Revenue", min_value=0,step=1000)
@@ -37,7 +37,7 @@ stand  = joblib.load(r'ss.pkl')
 
 
  
-features_scaled = scaler.transform(features)
+features_scaled = stand.transform(features)
 prediction = model.predict(features_scaled)[0]
 
 if st.button("Predict Bankruptcy Risk"):features = np.array([[industry_map[industry],years_in_operation,annual_revenue,net_profit,total_assets,
